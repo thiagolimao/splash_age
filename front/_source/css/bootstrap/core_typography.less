@@ -1,0 +1,78 @@
+// font
+body
+{
+    font-family: @font-family-sans-serif;
+    font-size: @font-size-base;
+    color: @text-color;
+    background-color: @body-bg;
+    font-weight: @normal-font-weight;
+}
+
+p
+{
+    font-size: @font-size-small;
+    line-height: 1.8em;
+    margin: 0 0 20px 0;
+}
+
+li
+{
+    font-size: @font-size-small;
+}
+a {
+    color: @link-color;
+    text-decoration: none;
+    &:hover {
+        text-decoration: underline;
+        color: @link-hover-color;
+    }
+}
+
+.italic,em      { font-style: italic; }
+
+.fw-thin                 { font-weight: @thin-font-weight; }
+.fw-normal               { font-weight: @normal-font-weight; }
+.fw-semi-bold, b, strong { font-weight: @semi-bold-font-weight; }
+.fw-bold                 { font-weight: @bold-font-weight; }
+.fw-extra-bold           { font-weight: @extra-bold-font-weight; }
+
+.big
+{
+    font-size: @font-size-large;
+}
+
+
+input, select, textarea, button { font-family: @font-family-sans-serif; font-size: @font-size-small; }
+
+h1, h2, h3, h4, h5, h6 {
+    .fw-normal;
+    margin: 0;
+    padding: 0;
+    font-size: 10px;
+}
+
+h1 {
+    font-size: @font-size-h1;
+    color: @brand-primary;
+}
+h2 {
+    font-size: @font-size-h2;
+    color: @brand-primary;
+}
+
+/*
+.nav-social
+{
+    margin: 0;
+    padding: 0;
+    li
+    {
+        .pull-left;
+        .fw-thin;
+        line-height: 53px;
+        list-style-type: none;
+        margin-left: 15px;
+        font-size: 1.8em;
+    }
+}
+*/
