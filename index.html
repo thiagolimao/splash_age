@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Validação idade</title>
+
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+</head>
+
+<body class="">
+
+
+
+
+    <section id="stone-age-gate" class="clearfix visible" style="">
+
+        <header>
+            header
+        </header>
+
+        <aside class="age-gate-left clearfix">
+
+            <form action="" id="age-gate-form" class="">
+
+                <div class="errors-container"></div>
+
+                <div id="desktop-form" class="">
+                    <label>Qual seu nascimento?</label>
+                    <div class="inputs">
+                        <input placeholder="MM" name="month" maxlength="2" class="month form-control" type="text">
+                        <input placeholder="YYYY" name="year" maxlength="4" class="year form-control" type="text">
+                        <div class="form-control submit-wrapper">
+                            <input name="submit" class="btn btn-outline form-control desktop-submit" value="submit" type="submit">
+                        </div>
+                    </div>
+                </div>
+
+                <div id="mobile-form" class="">
+                    <label>Tem idade legal para beber?</label>
+                    <div class="inputs">
+                        <div class="col-xs-6">
+                            <input name="yes" class="btn btn-outline form-control mobile" value="yes" type="submit">
+                        </div>
+                        <div class="col-xs-6">
+                            <input name="no" class="btn btn-outline form-control mobile" value="no" type="submit">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="remember">
+                    <input id="remember_me" name="remember_me" checked="checked" type="checkbox">
+                    <label class="" for="remember_me">
+                        <i class="icon-circle"></i>
+                        <i class="icon-record"></i>
+                        Lembrar decisão
+                    </label>
+                </div>
+
+            </form>
+
+        </aside>
+
+        <footer>
+            footer
+        </footer>
+
+    </section>
+
+
+
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery_cookie.js"></script>
+
+    <script src="js/stone_age_gate.js"></script>
+</body>
+</html>
