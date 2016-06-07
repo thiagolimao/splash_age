@@ -8,7 +8,7 @@
     Title and basic Meta Tags
     =============================================== -->
     <meta charset="utf-8">
-    <title>nome_do_projeto</title>
+    <title>Cervejaria Veneno</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <meta name="author" content="Thiago Limão" />
@@ -36,13 +36,11 @@
     <!-- ==============================================
     Fonts
     =============================================== -->
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400,100,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
 
     <!-- ==============================================
     CSS
     =============================================== -->
-    <link href="vendors/slick-carousel/slick/slick.css" type="text/css" rel="stylesheet">
-
     <link href="css/app.min.css" type="text/css" rel="stylesheet">
 
     <!-- ==============================================
@@ -100,76 +98,67 @@
         <div id="loading-animation">&nbsp;</div>
     </div> <!-- End Preloader -->
 
-    <header class="header">
-        <div class="wrap">
+    <section class="sec_age">
 
-            <h1 class="logo">
-                <a href="#">
-                    <img src="img/logo_dufry.png" alt="Dufry">
-                </a>
-            </h1><!-- /.logo -->
+        <div class="container-fluid">
+            <div class="row">
 
-            <div class="user_action">
-                <nav class="nav_ico">
-                    <ul>
-                        <li><a href="#" class="circle">en</a></li>
-                        <li><a href="#" class="circle"><i class="ico"></i></a></li>
-                    </ul>
-                </nav>
+                <div class="col-md-6">
 
-                <form class="search">
-                    <input id="search_item" class="search_item" placeholder="" type="search"/>
-                    <label for="search_item">advanced search teste</label>
-                </form><!-- /busca -->
-            </div><!-- /user_action -->
+                    <h1 class="logo">
+                        <img src="img/logo_veneno_gdr.png" alt="Cervejaria Veneno">
+                    </h1><!-- /.logo -->
 
-            <div class="clearfix"></div><!-- /clearfix -->
-        </div><!-- /.wrap -->
+                </div><!-- /.col-md-6 -->
 
-        <nav class="nav_bar">
-            <ul class="wrap">
-                <li><a href="#" title="our company">our company</a></li>
-                <li><a href="#" title="investors">investors</a></li>
-                <li><a href="#" title="customer service">customer service</a></li>
-                <li><a href="#" title="dufry shopping">dufry shopping</a></li>
-                <li><a href="#" title="our websites">our websites</a></li>
-                <li><a href="#" title="dufry magazine">dufry magazine</a></li>
-            </ul><!-- /.wrap -->
-        </nav><!-- /.nav_bar -->
+                <div class="col-md-6">
 
-    </header><!-- /.header -->
+                    <form action="" id="age-gate-form" class="">
 
-	<section class="landing-cover">
-        <div class="wrap">
+                        <div class="errors-container"></div>
 
-            <div class="slider">
-                <div>your content</div>
-                <div>your content</div>
-                <div>your content</div>
-            </div><!-- /.slider -->
+                        <div id="desktop-form" class="">
+                            <h2 class="type01">
+                                Já é
+                                <span><strong>grandinho</strong>?</span>
+                            </h2>
 
-        </div><!-- /.wrap -->
-	</section><!-- /.landing-cover -->
+                            <div class="">
+                                <input placeholder="MM" name="month" maxlength="2" class="month form-control" type="text">
+                                <span class="separa">/</span>
+                                <input placeholder="AAAA" name="year" maxlength="4" class="year form-control" type="text">
+                                <input name="submit" class="btn desktop-submit" value="beber" type="submit">
+                            </div>
+                        </div><!-- /desktop-form -->
 
+                        <!-- <div id="mobile-form" class="">
+                            <label>Tem idade legal para beber?</label>
+                            <div class="inputs">
+                                <div class="col-xs-6">
+                                    <input name="yes" class="btn btn-outline form-control mobile" value="yes" type="submit">
+                                </div>
+                                <div class="col-xs-6">
+                                    <input name="no" class="btn btn-outline form-control mobile" value="no" type="submit">
+                                </div>
+                            </div>
+                        </div> -->
 
-	<section class="">
-		<div class="container">
-			<div class="wrap">
+                        <div class="remember">
+                            <input id="remember_me" name="remember_me" checked="checked" type="checkbox">
+                            <label class="" for="remember_me">
+                                Lembrar decisão
+                            </label>
+                        </div>
 
-                section
+                    </form>
 
-			</div><!-- /.wrap -->
-		</div><!-- /.container -->
-	</section><!-- /. -->
+                </div><!-- /.col-md-6 -->
 
+            </div><!-- /.row -->
+        </div><!-- /.container-fluid -->
 
-    <footer class="footer">
-        <div class="wrap">
+    </section><!-- /.sec_age -->
 
-            footer
-
-        </div><!-- /.wrap -->
-    </footer><!-- /.footer -->
 
 	<script type="text/javascript" src="js/vendor.min.js"></script>
 	<script type="text/javascript" src="js/app.min.js"></script>

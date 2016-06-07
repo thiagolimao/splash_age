@@ -4,7 +4,6 @@ body
     font-family: @font-family-sans-serif;
     font-size: @font-size-base;
     color: @text-color;
-    background-color: @body-bg;
     font-weight: @normal-font-weight;
 }
 
@@ -31,10 +30,14 @@ a {
 .italic,em      { font-style: italic; }
 
 .fw-thin                 { font-weight: @thin-font-weight; }
+.fw-light                { font-weight: @light-font-weight; }
 .fw-normal               { font-weight: @normal-font-weight; }
-.fw-semi-bold, b, strong { font-weight: @semi-bold-font-weight; }
-.fw-bold                 { font-weight: @bold-font-weight; }
+.fw-medium               { font-weight: @medium-font-weight; }
+.fw-semi-bold            { font-weight: @semi-bold-font-weight; }
+.fw-bold, b, strong      { font-weight: @bold-font-weight; }
 .fw-extra-bold           { font-weight: @extra-bold-font-weight; }
+.fw-ultra-bold           { font-weight: @ultra-bold-font-weight; }
+
 
 .big
 {
@@ -49,15 +52,33 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0;
     padding: 0;
     font-size: 10px;
+
+    &.type01
+    {
+        color: @white;
+        font-size: 3rem;
+        line-height: 0.8em;
+        .fw-light;
+        margin-bottom: 30px;
+        span
+        {
+            .block;
+            padding-bottom: 10px;
+        }
+        strong
+        {
+            .fw-semi-bold;
+        }
+    }
 }
 
 h1 {
     font-size: @font-size-h1;
-    color: @brand-primary;
+    // color: @brand-primary;
 }
 h2 {
     font-size: @font-size-h2;
-    color: @brand-primary;
+    // color: @brand-primary;
 }
 
 /*

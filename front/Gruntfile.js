@@ -6,9 +6,8 @@ module.exports = function(grunt) {
      pkg: grunt.file.readJSON('package.json'),
 
 
-
       // Define our source and build folders
-      proxy_url:    'local.init',
+      proxy_url:    'local.veneno',
 
       build:        '_public',
       css_build:    '_public/css',
@@ -18,6 +17,7 @@ module.exports = function(grunt) {
       css_src:      '_source/css',
       js_src:       '_source/js',
       vendor_src:   '_source/vendors',
+
 
       meta: {
         css : {
@@ -52,6 +52,10 @@ module.exports = function(grunt) {
 
 
       watch: {
+          // options: {
+          //   livereload: true
+          // },
+
           css: {
             files: ['<%= css_src %>/*.less','<%= css_src %>/**/*'],
             tasks: ['css'],
@@ -96,6 +100,10 @@ module.exports = function(grunt) {
            build: {
             files: {
                '<%= js_build %>/app.min.js': ['<%= js_build %>/app.js'],
+            },
+          },
+           vendor: {
+            files: {
                '<%= js_build %>/vendor.min.js': ['<%= js_build %>/vendor.js'],
             },
           },
@@ -107,36 +115,30 @@ module.exports = function(grunt) {
           },
 
           basic_and_extras: {
-            src: [
-              // JS
-              '<%= js_src %>/*.js'
-            ],
+            src: ['<%= js_src %>/*.js'],
             dest: '<%= js_build %>/app.js',
           },
 
           vendor: {
             src: [
-              // Vendor Plugins
-              '<%= vendor_build %>/jquery/dist/jquery.js', // jQuery
-              // '<%= vendor_build %>/slick-carousel/slick/slick.js', // slick
-              // '<%= vendor_build %>/vide/dist/jquery.vide.js',
-              // '<%= vendor_build %>/jquery-tubular/dist/js/jquery-tubular.min.js',
-              // '<%= vendor_build %>/modernizr/modernizr.js',
-              // '<%= vendor_build %>/fastclick/lib/fastclick.js',
-              // '<%= vendor_build %>/jquery.countdown/dist/jquery.countdown.js',
-              // '<%= vendor_build %>/featherlight/release/featherlight.min.js',
+              '<%= vendor_build %>/bower_components/jquery/dist/jquery.js', // jQuery
+              // '<%= vendor_build %>/bower_components/jquery-validation/dist/jquery.validate.js', // jQuery
+              // '<%= vendor_build %>/bower_components/bootstrap/dist/js/bootstrap.min.js', // Bootstrap
+              // '<%= vendor_build %>/bower_components/bootstrap-material-design/dist/js/material.js', // Material Bootstrap
+              // '<%= vendor_build %>/bower_components/bootstrap-material-design/dist/js/ripples.js', // Material Bootstrap
+              // '<%= vendor_build %>/bower_components/slick-carousel/slick/slick.js', // slick
             ],
             dest: '<%= js_build %>/vendor.js',
           },
       },
 
       // CSS Concat
-      concat_css: {
-        options: {},
-        files: {
-          // '<%= css_build %>/vendor.css': [ '<%= vendor_build %>/slick-carousel/slick/slick.css' ],
-        },
-      },
+      // concat_css: {
+      //   options: {},
+      //   files: {
+      //     '<%= css_build %>/vendor.css': ['<%= vendor_src %>/bootstrap/dist/css/bootstrap.min.css', '<%= vendor_src %>/slick-carousel/slick/slick.css'],
+      //   },
+      // },
 
       // CSSmin Config
       cssmin: {
@@ -200,11 +202,11 @@ module.exports = function(grunt) {
 
     });
 
-    grunt.registerTask( 'w', ['connect','watch'] );
+    grunt.registerTask( 'w', ['browserSync','watch'] );
     grunt.registerTask('css', ['less','cmq','cssmin']);
     grunt.registerTask('js', ['jshint', 'concat', 'uglify']);
 
-    grunt.registerTask('default', ['connect', 'watch', 'less', 'cmq', 'concat_css', 'cssmin', 'jshint', 'concat', 'uglify']);
+    grunt.registerTask('default', ['connect', 'watch', 'less', 'cmq', 'cssmin', 'jshint', 'concat', 'uglify']);
 
 
 };

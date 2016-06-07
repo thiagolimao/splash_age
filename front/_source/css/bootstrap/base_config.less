@@ -1,12 +1,66 @@
 body
 {
-	min-width: @screen;
+    background-color: @body-bg;
+    background-image: url(@body-bg-desktop);
+
+    background-attachment: fixed;
+
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 .wrap
 {
 	margin: 0 auto;
 	position: relative;
 	width: @screen;
+}
+
+.sec_age
+{
+    max-width: 770px;
+    height: 100vh;
+
+    margin-left: auto;
+    margin-right: auto;
+
+    .container-fluid
+    {
+        height: 100%;
+        min-height: 100%;
+
+        /* habilita o flex nos filhos diretos */
+        display: -ms-flex;
+        display: -webkit-flex;
+        display: flex;
+
+        /* centraliza na vertical */
+        -ms-align-items: center;
+        -webkit-align-items: center;
+        align-items: center;
+
+        /* centraliza na horizontal */
+        -ms-justify-content: center;
+        -webkit-justify-content: center;
+        justify-content: center;
+    }
+
+    .logo
+    {
+        padding-right: 30px;
+
+        img
+        {
+            width: 100%;
+            display: inline-block;
+        }
+    }
+
+    #age-gate-form
+    {
+        padding-top: 3.5rem;
+        white-space: nowrap;
+    }
 }
 
 

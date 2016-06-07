@@ -1,19 +1,59 @@
 /* ==================================================================
 FORM
 ================================================================== */
-/*
+/**/
 input, select, textarea, button {
     background-color: @white;
     border: none;
-    margin-bottom: 15px;
-    height: 22px;
-    width: 100%;
+    height: 70px;
+    // width: 100%;
     padding: 0 5px;
+    text-transform: uppercase;
+
+    font-size: 1.2rem;
+
+    &.month,
+    &.year
+    {
+        .text-center;
+    }
+    &.month
+    {
+        width: 70px;
+    }
+    &.year
+    {
+        width: 100px;
+    }
+
+    + .separa
+    {
+        font-size: 2.5em;
+        color: @white;
+        padding-left: 6px;
+        padding-right: 6px;
+        position: relative;
+        top: 5px;
+    }
 }
+
+input[type="checkbox"],
+input[type="radio"]
+{
+    height: auto;
+}
+
 input[type="submit"] {
-    .btn_submit;
-    text-indent: -9999px;
+    &.desktop-submit
+    {
+        background-color: #00c8ca;
+        padding-left: 30px;
+        padding-right: 30px;
+        color: @white;
+        margin-left: 28px;
+    }
 }
+
 label
 {
     font-size: 1.2em;
@@ -30,7 +70,15 @@ input[type=number]::-webkit-outer-spin-button {
     margin: 0;
 }
 
-label.error { font-style: italic; font-size: 1.1em; margin-bottom: 10px; }
-input:focus { background-color: @dark-green; color: @white; }
-input.error { background-color: @brand-danger; color: @white; margin-bottom: 5px; }
-*/
+.remember
+{
+    margin-top: 20px;
+    input
+    {
+        margin-right: 10px;
+    }
+}
+
+// label.error { font-style: italic; font-size: 1.1em; margin-bottom: 10px; }
+// input:focus { background-color: @dark-green; color: @white; }
+// input.error { background-color: @brand-danger; color: @white; margin-bottom: 5px; }
